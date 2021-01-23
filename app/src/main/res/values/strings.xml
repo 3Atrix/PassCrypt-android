@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">PassCrypt</string>
+    <string name="show_pass">Show pass</string>
+    <string name="show_text">Show text</string>
+    <string name="encrypt">Encrypt</string>
+    <string name="decrypt">Decrypt</string>
+    <string name="encrypt_files">Encrypt files</string>
+    <string name="decrypt_files">Decrypt files</string>
+    <string name="exit">Exit</string>
+    <string name="recovery">Reboot recovery</string>
+    <string name="input_text_for_cryption">Input text for encryption/decryption</string>
+    <string name="one_pass_at_lease">Input one pass at lease</string>
+    <string name="inputed_text_empty">The inputed text empty</string>
+    <string name="encrypting">Encrypting ……</string>
+    <string name="decrypting">Decrypting ……</string>
+    <string name="encrypt_success">Encrypt success</string>
+    <string name="decrypt_success">Decrypt success</string>
+    <string name="view_text">Click \'Show text\' to view text</string>
+    <string name="view_plaintext">Click \'Show text\' to view plaintext</string>
+    <string name="view_ciphertext">Click \'Show text\' to view ciphertext</string>
+    <string name="cipher_content_is_saved_in_file">The cipher content is saved in file : </string>
+    <string name="put_ciphertext_file_in_path">You can put the ciphertext file in path : </string>
+    <string name="plaintext_decrypted_from_file">The plaintext is decrypted from file : </string>
+    <string name="plain_dir_name">plain</string>
+    <string name="cipher_dir_name">secret</string>
+    <string name="file_encrypting">Files encrypting ……</string>
+    <string name="file_decrypting">Files decrypting ……</string>
+    <string name="put_plain_file_in_dir">Please put plain-files into dir : </string>
+    <string name="put_encrypted_file_in_dir">Please put encrypted-files in dir : </string>
+    <string name="plain_file_in_dir">The plain-files in dir : </string>
+    <string name="encrypted_file_in_dir">The encrypted-files in dir : </string>
+    <string name="confirm_reboot_recovery">The device will reboot recovery</string>
+    <string name="confirm_no">No</string>
+    <string name="confirm_yes">Yes</string>
+    <string name="erasing_files_waiting">Erasing files, waiting ……</string>
+</resources>
