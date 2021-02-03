@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private boolean isCrypting = false;
     //////
     private final String homePath = Environment.getExternalStorageDirectory().getAbsolutePath();
-    private final String cipherTxtName = "cipher.txt";
-    private final String cipherTxtPath = homePath + "/" + cipherTxtName;
+    private String cipherTxtName;
+    private String cipherTxtPath;
     private boolean cipherTxtFlag = false;
     //////
     private String plainDirName;
@@ -52,6 +52,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         cipherDirName = getResources().getString(R.string.cipher_dir_name);
         plainDirPath = homePath + "/" + plainDirName;
         cipherDirPath = homePath + "/" + cipherDirName;
+
+        cipherTxtName = getResources().getString(R.string.cipher_file_name);
+        cipherTxtPath = homePath + "/" + cipherTxtName;
 
         initView();
         requestPermissions();
@@ -98,6 +101,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn = this.findViewById(R.id.btn_recovery);
         btn.setVisibility(View.GONE);
 //        btn.setOnClickListener(this); //< reboot recovery : Permission Denied; Need su or disable selinux
+        btn = this.findViewById(R.id.btn_delete_cache);
+        btn.setOnClickListener(this);
     }
 
     private void setShowPass(boolean isShow) {
@@ -372,6 +377,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 recovery();
             }
             break;
+            case R.id.btn_delete_cache: {
+                initEnv();
+            }
+            break;
         }
     }
 
@@ -413,7 +422,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     break;
                 }
 
-                initEnv();
                 return;
             } while (false);
 

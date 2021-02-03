@@ -124,6 +124,13 @@
                 android:text="@string/encrypt_files" />
 
             <Button
+                android:id="@+id/btn_delete_cache"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/delete_cache" />
+
+            <Button
                 android:id="@+id/btn_decrypt_file"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

@@ -6,6 +6,7 @@
     <string name="decrypt">Decrypt</string>
     <string name="encrypt_files">Encrypt files</string>
     <string name="decrypt_files">Decrypt files</string>
+    <string name="delete_cache">Delete files</string>
     <string name="exit">Exit</string>
     <string name="recovery">Reboot recovery</string>
     <string name="input_text_for_cryption">Input text for encryption/decryption</string>
@@ -23,6 +24,7 @@
     <string name="plaintext_decrypted_from_file">The plaintext is decrypted from file : </string>
     <string name="plain_dir_name">plain</string>
     <string name="cipher_dir_name">secret</string>
+    <string name="cipher_file_name">cipher.txt</string>
     <string name="file_encrypting">Files encrypting ……</string>
     <string name="file_decrypting">Files decrypting ……</string>
     <string name="put_plain_file_in_dir">Please put plain-files into dir : </string>
