@@ -260,6 +260,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (!new File(plainDirPath).exists()) {
             String text = getResources().getString(R.string.put_plain_file_in_dir) + " /sdcard/" + plainDirName;
             tv_show_msg.setText(text);
+
+            new File(plainDirPath).mkdirs();
             return;
         }
 
@@ -300,6 +302,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (!new File(cipherDirPath).exists()) {
             String text = getResources().getString(R.string.put_encrypted_file_in_dir) + " /sdcard/" + cipherDirName;
             tv_show_msg.setText(text);
+
+            new File(cipherDirPath).mkdirs();
             return;
         }
 
@@ -378,7 +382,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             break;
             case R.id.btn_delete_cache: {
-                initEnv();
+                deleteCache();
             }
             break;
         }
@@ -422,6 +426,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     break;
                 }
 
+                initEnv();
                 return;
             } while (false);
 
@@ -448,6 +453,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initEnv() {
+        File file = new File(plainDirPath);
+        if (!file.exists()) {
+            file.mkdirs();
+        }
+
+        file = new File(cipherDirPath);
+        if (!file.exists()) {
+            file.mkdirs();
+        }
+    }
+
+    private void deleteCache() {
         isCrypting = true;
         tv_show_msg.setText(R.string.erasing_files_waiting);
 
